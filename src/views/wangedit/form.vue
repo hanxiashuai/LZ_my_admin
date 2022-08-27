@@ -174,13 +174,12 @@ const editorConfig = {
 //   },
 //change 事件
 const handleChange = (editor) => {
-  // console.log("change:", editor.getHtml());
   shallow.value = editor.getHtml();
    console.log("11111111", editor.children);
   actionhtml.content = editor.getHtml();
-  actionhtml.title = editor.children[0].children[0].text;
-  actionhtml.time = editor.children[1].children[0].text;
-  actionhtml.contentText = editor.children[2].children[1]
+  actionhtml.title = editor.children[0]?.children[0]?.text;
+  actionhtml.time = editor.children[1]?.children[0]?.text;
+  actionhtml.contentText = editor.children[2]?.children[1]
   // console.log(editor.getText());
 };
 //点击按钮新增内容接口
