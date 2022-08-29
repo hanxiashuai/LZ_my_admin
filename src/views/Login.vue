@@ -141,8 +141,8 @@ const loginFormRef = ref(null);
 
 // 登录的表单数据
 const loginForm = reactive({
-  username: "ceshi",
-  password: "000000",
+  username: "admin1",
+  password: "aaaaaa",
 });
 
 function captchaSuccess() {

@@ -61,8 +61,6 @@
 				try {
 					console.log(id);
 					let res = await deleteLbt(id);
-
-					location.reload()
 					if (res.code == 1) {
 						ElMessage({
 							showClose: true,
@@ -70,6 +68,7 @@
 							type: "success",
 						});
 					}
+					getlist();
 					// tableData.value = res.records;
 				} catch (error) {
 					console.log(error);

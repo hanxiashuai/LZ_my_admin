@@ -22,7 +22,7 @@
     "sha.js": "^2.4.11",
     "sm-crypto": "^0.3.9",
     "vue": "^3.2.13",
-    "vue-i18n": "^9.1.10",
+    " ": "^9.1.10",
     "vue-property-decorator": "^9.1.2",
     "vue-router": "^4.0.3",
     "vue3-slide-verify": "^1.1.3",

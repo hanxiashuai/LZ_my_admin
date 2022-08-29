@@ -12,7 +12,9 @@
         <el-dropdown-item command="UserFilled" icon="UserFilled"
           >个人中心</el-dropdown-item
         >
-        <el-dropdown-item command="b" icon="Grid">布局设置</el-dropdown-item>
+        <el-dropdown-item command="updatePassword" icon="Grid"
+          >修改密码</el-dropdown-item
+        >
         <el-dropdown-item command="logout" icon="SwitchButton"
           >退出登录</el-dropdown-item
         >
@@ -21,7 +23,7 @@
   </el-dropdown>
 </template>
 
-<script  setup>
+<script setup>
 import { ElMessage } from "element-plus";
 import { useStore } from "vuex";
 import { useRoute, useRouter } from "vue-router";
@@ -47,17 +49,24 @@ const handleCommand = (command) => {
     });
   } else if (command == "UserFilled") {
     // store.commit("logout");
-    router.push("/userfilled/" + pageID);
+    router.push("/profile/" + pageID);
     ElMessage({
       showClose: true,
       message: "个人中心",
+      type: "success",
+    });
+  } else if (command == "updatePassword") {
+    router.push("/updatePassword/" + pageID);
+    ElMessage({
+      showClose: true,
+      message: "修改密码",
       type: "success",
     });
   }
 };
 </script>
 
-<style >
+<style>
 .el-dropdown-link {
   cursor: pointer;
   color: var(--el-color-primary);

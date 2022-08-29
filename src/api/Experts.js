@@ -65,15 +65,90 @@ export function doctors(id) {
   return request({
     method: "get",
     url: "/api/getDoct",
-    params:{
-    groupId:id
-    }
+    params: {
+      groupId: id,
+    },
   });
 }
 //获取全部医生内容信息
-export function doctor(){
-    return request({
-        method: "get",
-        url: "/api/doctors",
-      });
+export function doctor() {
+  return request({
+    method: "get",
+    url: "/api/doctors",
+  });
 }
+//删除医生的接口
+export function delecydoctor(id) {
+  return request({
+    method: "delete",
+    url: "/api/getdelete",
+    data: {
+      id,
+    },
+  });
+}
+//修改内容
+
+export function setdoctor(
+  id,
+  team,
+  department,
+  position,
+  photo,
+  onlineTime,
+  unit,
+  desc1,
+) {
+  return request({
+    method: "post",
+    url: "/api/setdoctor",
+    data: {
+      id,
+      team,
+      department,
+      position,
+      photo,
+      onlineTime,
+      unit,
+      desc1,
+     
+      
+    },
+  });
+}
+//根据id获取医生信息
+export function iddoctor(id) {
+  return request({
+    method: "get",
+    url: "/api/iddoctor",
+    params: {
+      id,
+    },
+  });
+}
+//新增内容
+
+// export function newdoctor(team, department, position, photo, onlineTime, unit, desc1,groupId) {
+//   return request({
+//     method: "post",
+//     url: "/api/newdoctor",
+//     data: {
+//       team, department, position, photo, onlineTime, unit, desc1,groupId
+//     },
+//   });
+// }
+export function newdoctor(data) {
+  return request({
+    method: "post",
+    url: "/api/newdoctor",
+    data
+  });
+}
+
+// export function newdoctor(data) {
+//   return request({
+//     method: "post",
+//     url: "/api/newdoctor",
+//     data
+//   });
+// }
